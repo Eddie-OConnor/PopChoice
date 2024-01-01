@@ -1,28 +1,34 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <title>PopChoice</title>
         <link rel="stylesheet" href="index.css">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab:wght@300;400;700&display=swap');
         </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     </head>
     <body>
         <header>
-            <img src="PopChoiceIcon.png">
+            <img src="PopChoiceIcon.png" alt="pop choice icon">
             <h1>PopChoice</h1>
         </header>
         <main>
-            <h3>What's your favorite movie and why?</h3>
-            <textarea></textarea>
-
-            <h3>Are you in the mood for something new or a classic?</h3>
-            <textarea></textarea>
-
-            <h3>Do you wanna have fun or do you want something serious?</h3>
-            <textarea></textarea>
-
-            <button id="btn">Let's Go</button>
+            <form id="movie-form">
+                <div>
+                    <label for="favorite-movie-question">What's your favorite movie and why?</label>
+                    <textarea id="favorite-movie-question"></textarea>
+                </div>
+                <div>
+                    <label for="movie-mood-question">Are you in the mood for something new or a classic?</label>
+                    <textarea id="movie-mood-question"></textarea>
+                </div>
+                <div>
+                    <label for="fun-or-serious-movie-question">Do you wanna have fun or do you want something serious?</label>
+                    <textarea id="fun-or-serious-movie-question"></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Let's Go</button>
+            </form>
         </main>
         <script type="module" src="index.js"></script>
     </body>

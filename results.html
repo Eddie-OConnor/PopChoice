@@ -1,19 +1,23 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <title>PopChoice</title>
         <link rel="stylesheet" href="index.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab:wght@300;400;700&display=swap');
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     </head>
     <body>
         <header>
-            <img>
+            <img src="PopChoiceIcon.png" alt="pop choice icon">
             <h1>Pop Choice</h1>
         </header>
         <main>
-            <h3>Movie Name</h3>
-            <p>Movie description Movie description Movie description Movie description Movie description Movie description Movie description Movie description Movie description </p>
+            <h3>Movie Name (Year)</h3>
+            <p id="movie-description">Movie description Movie description Movie description Movie description Movie description Movie description Movie description Movie description Movie description </p>
 
-            <button>Go Again</button>
+            <button id="reset-btn">Go Again</button>
         </main>
         <script type="module" src="index.js"></script>
     </body>
