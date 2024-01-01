@@ -1,11 +1,11 @@
 import { openai, supabase } from './config.js';
 
-const movieForm = document.getElementById('movie-form')
+const submitBtn = document.getElementById('submit-btn')
 const favMovie = document.getElementById('favorite-movie-')
 const movieMood = document.getElementById('movie-mood-')
 const funOrSerious = document.getElementById('fun-or-serious-movie-')
 
-movieForm.addEventListener('submit', function(e){
+submitBtn.addEventListener('click', function(e){
     e.preventDefault()
     main(favMovie.value, movieMood.value, funOrSerious.value)
 })
