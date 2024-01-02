@@ -8,6 +8,7 @@ const funOrSerious = document.getElementById('fun-or-serious-movie-')
 submitBtn.addEventListener('click', function(e){
     e.preventDefault()
     main(favMovie.value, movieMood.value, funOrSerious.value)
+    console.log('hello')
 })
 
 async function main(favMovie, movieMood, funOrSerious) {
