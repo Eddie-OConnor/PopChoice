@@ -1,3 +1,4 @@
+import { response } from 'express';
 import { openai, supabase } from './config.js';
 
 const submitBtn = document.getElementById('submit-btn')
@@ -10,6 +11,15 @@ submitBtn.addEventListener('click', function(e){
     main(favMovie.value, movieMood.value, funOrSerious.value)
     console.log('hello')
 })
+
+fetch('/config')
+    .then(response => response.json())
+    .then(config => {
+        const openaiApiKey = config.openaiApiKey;
+        const supabaseApiKey = config.supabaseApiKey;
+        const supabaseUrl = config.supabaseUrl 
+    })
+    .catch(error => console.error('error fetching configuration', error))
 
 async function main(favMovie, movieMood, funOrSerious) {
     try {
