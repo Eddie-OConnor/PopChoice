@@ -1,5 +1,6 @@
-import { response } from 'express';
-import { openai, supabase } from './config.js';
+// index.js
+
+import { openai, supabase, config } from './config.js';
 
 const submitBtn = document.getElementById('submit-btn')
 const favMovie = document.getElementById('favorite-movie-')
@@ -15,9 +16,15 @@ submitBtn.addEventListener('click', function(e){
 fetch('/config')
     .then(response => response.json())
     .then(config => {
-        const openaiApiKey = config.openaiApiKey;
-        const supabaseApiKey = config.supabaseApiKey;
-        const supabaseUrl = config.supabaseUrl 
+        // const openaiApiKey = config.openaiApiKey;
+        // const supabaseApiKey = config.supabaseApiKey;
+        // const supabaseUrl = config.supabaseUrl 
+
+        const {openaiApiKey, supabaseApiKey, supabaseUrl} = config
+        openai.config.apiKey = openaiApiKey
+        supabase.auth.setAuth(supabaseApiKey)
+
+        main(openai, supabase)
     })
     .catch(error => console.error('error fetching configuration', error))
 

@@ -1,16 +1,16 @@
-import 'dotenv/config'
+// server.js
 import express from 'express'
-import {openai, supabase} from './config.js'
+import dotenv from 'dotenv'
+dotenv.config()
+// console.log(process.env);
 
 const server = express()
 
-dotenv.config()
-
 server.get('/config', (req, res) => {
     res.json({
-        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
-        SUPABASE_API_KEY: process.env.SUPABASE_API_KEY,
-        SUPABASE_URL: process.env.SUPABASE_URL 
+        openaiApiKey: process.env.OPENAI_API_KEY,
+        supabaseApiKey: process.env.SUPABASE_API_KEY,
+        supabaseUrl: process.env.SUPABASE_URL
     })
 })
 
