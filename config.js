@@ -2,8 +2,8 @@
 
 import OpenAI from 'openai'
 import { createClient } from '@supabase/supabase-js'
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenv from 'dotenv'
+dotenv.config()
 
 
 /** OpenAI config */
@@ -25,4 +25,4 @@ export const config = {
   openaiApiKey,
   supabaseApiKey,
   supabaseUrl
-};
+}
